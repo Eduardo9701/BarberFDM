@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Descubre cortes, servicios y solicita tu cita en Barbería Fábrica de Muñecos.">
+  <title>Fábrica de Muñecos</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span class="brand-mark">FDM</span><span>FÁBRICA DE <b>MUÑECOS</b><small>BARBERÍA PREMIUM</small></span></a>
+    <div class="topbar-right">
+      <button class="cart-btn" id="cartOpenBtn" aria-label="Ver pedido de productos">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </div>
+    <nav id="mainNav">
+      <a href="#servicios">Servicios</a><a href="#catalogo">Cortes</a><a href="#transformaciones">Antes & Después</a><a href="#productos">Productos</a><a href="#cita" class="nav-cta">Solicitar cita</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">MÁS QUE UNA BARBERÍA, UNA EXPERIENCIA</p>
+        <h1>El estilo se fabríca<br><span>No se improvísa.</span></h1>
+        <p class="hero-copy">Cortes con personalidad, desvanecidos limpios, perfilado de barba y atención profesional en Altotonga, Veracruz.</p>
+        <div class="hero-actions"><a class="button button-gold" href="#cita">Solicitar una cita</a><a class="button button-outline" href="#catalogo">Explorar cortes</a></div>
+        <p class="microcopy">Las solicitudes se confirman directamente con la barbería.</p>
+      </div>
+      <div class="hero-art" role="img" aria-label="Equipo de barberos en Fábrica de Muñecos Altotonga">
+        <div class="art-ring"></div>
+        <div class="hero-card">
+          <div class="hero-card-img-wrap">
+            <img src="assets/images/fdm-hero-team.jpg" alt="Equipo de Barberos Fábrica de Muñecos en Calle Gomez Farías 27  Altotonga, Ver" class="hero-card-img" width="600" height="400">
+            <div class="hero-card-overlay"></div>
+          </div>
+          <div class="hero-card-badge">
+            <span class="badge-dot"></span>
+            <span>Calle Gomez Farías #27 · Altotonga, Ver.</span>
+          </div>
+          <div class="hero-card-info">
+            <span class="hero-card-tag">FÁBRICA DE MUÑECOS</span>
+            <b>Más que una barbería, una experiencia.</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="section-heading"><p class="eyebrow">SERVICIOS</p><h2>Detalles que hacen <span>la diferencia.</span></h2><p>Selecciona el servicio que mejor va contigo.</p></div>
+      <div class="service-grid" id="serviceGrid"></div>
+    </section>
+
+    <section class="section catalog-section" id="catalogo">
+      <div class="section-heading"><p class="eyebrow">INSPIRACIÓN</p><h2>Encuentra tu <span>próximo corte.</span></h2><p>Elige un estilo y cuéntanos qué buscas.</p></div>
+      <div class="filter-row" id="filters"><button class="filter active" data-filter="Todos">Todos</button><button class="filter" data-filter="Degradado">Degradados</button><button class="filter" data-filter="Diseño">Diseños Freestyle</button><button class="filter" data-filter="Barba">Barba & Estilo</button></div>
+      <div class="cut-grid" id="cutGrid"></div>
+    </section>
+
+    <section class="section ba-section" id="transformaciones">
+      <div class="section-heading">
+        <p class="eyebrow">TRANSFORMACIONES REALES</p>
+        <h2>El poder de un <span>buen corte.</span></h2>
+        <p>Desliza el control horizontal para comparar el cambio antes y después de pasar por el sillón de Fábrica de Muñecos.</p>
+      </div>
+      <div class="ba-card">
+        <div class="ba-frame" id="baFrame">
+          <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1000&h=650&q=80" alt="Después: Corte degradado y barba estilizada" class="ba-img ba-after-img" loading="lazy">
+          <div class="ba-before-wrap" id="baBeforeWrap">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&h=650&q=80" alt="Antes del corte" class="ba-img ba-before-img" loading="lazy">
+          </div>
+          <span class="ba-pill ba-pill-before">Antes</span>
+          <span class="ba-pill ba-pill-after">Después</span>
+          <div class="ba-divider" id="baDivider">
+            <div class="ba-handle-btn">↔</div>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="ba-range-slider" id="baRange" aria-label="Control deslizante antes y después">
+        </div>
+        <div class="ba-footer">
+          <div>
+            <b>Transformación: Fade Texturizado + Perfilado de Barba</b>
+            <p>Servicio realizado por nuestro equipo máster en 50 minutos.</p>
+          </div>
+          <a href="#cita" class="button button-gold">Quiero un cambio así</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section product-section" id="productos">
+      <div class="section-heading">
+        <p class="eyebrow">BARBER CARE & STYLING</p>
+        <h2>Lleva el estilo <span>a tu casa.</span></h2>
+        <p>Fórmulas de grado profesional seleccionadas por nuestros barberos para mantener tu corte, barba y peinado impecables todos los días.</p>
+      </div>
+      <div class="filter-row" id="productFilters">
+        <button class="filter active" data-product-filter="Todos">Todos</button>
+        <button class="filter" data-product-filter="Fijación">Fijación</button>
+        <button class="filter" data-product-filter="Barba">Barba</button>
+        <button class="filter" data-product-filter="Cuidado">Cuidado</button>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="product-banner">
+        <span class="product-banner-icon">✦</span>
+        <div>
+          <b>¿Deseas apartar o consultar disponibilidad?</b>
+          <p>Haz clic en "Pedir por WhatsApp" en cualquier producto para consultar stock inmediato o incluirlo en tu próxima cita.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section booking-section" id="cita">
+      <div class="booking-copy">
+        <p class="eyebrow">TU SIGUIENTE CORTE</p>
+        <h2>Reserva un espacio<br><span>para ti.</span></h2>
+        <div class="contact-line contact-line--hours">
+          <span>◷</span>
+          <div class="hours-block">
+            <b>Horario de atención</b>
+            <div class="hours-grid" id="openingHours">
+              <div class="hours-row">
+                <span class="hours-days">Lunes a Viernes</span>
+                <span class="hours-sep" aria-hidden="true"></span>
+                <span class="hours-time">10:00 am – 7:00 pm</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-days">Sábados</span>
+                <span class="hours-sep" aria-hidden="true"></span>
+                <span class="hours-time">9:00 am – 8:00 pm</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-days">Domingos</span>
+                <span class="hours-sep" aria-hidden="true"></span>
+                <span class="hours-time">9:00 am – 5:00 pm</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-line">
+          <span>⌖</span>
+          <div>
+            <b>Ubicación</b>
+            <p id="businessAddress">Calle Gomez Farías #27, Altotonga, Veracruz</p>
+            <a id="mapsLink" class="maps-link" href="https://maps.app.goo.gl/igaLUFGYd7kGjNXo7" target="_blank" rel="noopener">Ver ruta en Google Maps ↗</a>
+          </div>
+        </div>
+        <div class="location-card">
+          <div class="location-card-img">
+            <img src="assets/images/fdm-local-salon.jpg" alt="Instalaciones y sillones de Fábrica de Muñecos en Altotonga" loading="lazy" width="450" height="260">
+          </div>
+          <div class="location-card-footer">
+            <span>💈 Sucursal Altotonga</span>
+            <small>Calle Gomez Farías #27. Atención profesional y confort</small>
+          </div>
+        </div>
+      </div>
+      <form class="booking-form" id="bookingForm" novalidate>
+        <h3>Solicitar cita</h3>
+        <label for="clientName">Nombre completo</label>
+        <input id="clientName" name="clientName" required minlength="2" maxlength="70" placeholder="Ej. Carlos Martínez" autocomplete="name">
+        <span class="field-error" id="nameError" hidden></span>
+
+        <label for="clientPhone">Teléfono de contacto (10 dígitos en México)</label>
+        <input id="clientPhone" name="clientPhone" type="tel" required maxlength="18" placeholder="Ej. 55 1234 5678" autocomplete="tel">
+        <span class="field-error" id="phoneError" hidden></span>
+        
+        <div class="form-row">
+          <div>
+            <label for="serviceSelect">Servicio</label>
+            <select id="serviceSelect" name="service" required></select>
+          </div>
+          <div>
+            <label for="barberSelect">Barbero preferido</label>
+            <select id="barberSelect" name="barber" required>
+              <option value="Cualquiera disponible">Cualquiera disponible (Más rápido)</option>
+              <option value="Carlos — Fade Master">Carlos — Especialista en Fades</option>
+              <option value="Mateo — Barba & Navaja">Mateo — Barba y Navaja clásica</option>
+              <option value="David — Master Barber">David — Estilos ejecutivos y tijera</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label for="bookingDate">Fecha preferida</label>
+            <input id="bookingDate" name="date" type="date" required>
+          </div>
+          <div>
+            <label for="bookingTime">Hora preferida</label>
+            <select id="bookingTime" name="time" required></select>
+          </div>
+        </div>
+        <div id="dateNotice" class="date-notice" hidden></div>
+
+        <div class="booking-addon-wrap">
+          <label class="booking-addon-title">¿Deseas apartar productos para recoger en tu cita?</label>
+          <div id="bookingProductsList" class="booking-addon-grid"></div>
+        </div>
+
+        <div class="estimate-banner">
+          <span>Inversión estimada:</span>
+          <b id="estimateTotal">$180</b>
+        </div>
+
+        <label for="bookingNotes">Notas o peticiones especiales (opcional)</label>
+        <textarea id="bookingNotes" name="notes" rows="2" maxlength="300" placeholder="Ej. Tengo el cabello rizado, quiero mantener largo arriba..."></textarea>
+        
+        <button class="button button-gold full" type="submit" id="submitBookingBtn">Enviar solicitud por WhatsApp</button>
+        <p class="microcopy">La cita queda pendiente de confirmación directa del equipo.</p>
+        <p id="formStatus" class="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Carrito Flotante -->
+  <button class="floating-cart-btn" id="floatingCartBtn" hidden aria-label="Ver pedido de productos">
+    <span>🛒 Pedido (<b id="floatingCartCount">0</b>)</span>
+    <span class="floating-cart-sep">·</span>
+    <b id="floatingCartTotal">$0</b>
+  </button>
+
+  <!-- Drawer / Modal del Carrito -->
+  <div class="cart-overlay" id="cartOverlay" hidden>
+    <div class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="cart-header">
+        <div class="cart-header-title">
+          <span class="cart-icon">🛒</span>
+          <h3 id="cartTitle">Tu Pedido de Productos</h3>
+        </div>
+        <button class="cart-close" id="cartCloseBtn" aria-label="Cerrar pedido">✕</button>
+      </div>
+      <div class="cart-body">
+        <div class="cart-empty" id="cartEmpty">
+          <p>Tu pedido está vacío actualmente.</p>
+          <a href="#productos" class="button button-outline" id="cartExploreBtn">Explorar catálogo</a>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+      </div>
+      <div class="cart-footer" id="cartFooter" hidden>
+        <div class="cart-summary">
+          <span>Total de productos:</span>
+          <strong id="cartSubtotal">$0</strong>
+        </div>
+        <p class="microcopy">Pídelos a domicilio/recoger en sucursal o agrégalos a tu próxima cita.</p>
+        <div class="cart-actions">
+          <button class="button button-gold full" id="cartCheckoutWhatsapp">
+            Pedir por WhatsApp →
+          </button>
+          <button class="button button-outline full" id="cartAttachToBooking">
+            Llevar estos productos a mi cita ✂
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenedor de Notificaciones Toast -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <footer><a class="brand footer-brand" href="#inicio"><span class="brand-mark">FDM</span><span>FÁBRICA DE <b>MUÑECOS</b><small>BARBERÍA PREMIUM</small></span></a><p>© <span id="year"></span> Fábrica de Muñecos. Todos los derechos reservados.</p><a href="#inicio">Volver arriba ↑</a></footer>
+  <script src="app.js"></script>
+</body>
+</html>

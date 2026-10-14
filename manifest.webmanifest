@@ -1,0 +1,9 @@
+{
+  "name": "Fábrica de Muñecos - Barbería Premium",
+  "short_name": "FDM Barber",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#101010",
+  "theme_color": "#101010",
+  "description": "Catálogo de cortes y solicitudes de cita para barbería."
+}
